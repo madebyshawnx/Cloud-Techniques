@@ -46,6 +46,8 @@ This SOP outlines the steps to create and connect to a virtual machine in AWS, e
 
 **Step 1: Access AWS and Launch Instances** [0:05](https://loom.com/share/9a034b9d77f143d18157d71631305b02?t=5)
 
+![image alt](https://github.com/madebydxgxt/Cloud-Techniques/blob/main/Virtual-Machines/001/1.jpg?raw=true)
+
 ![generated-image-at-00:00:05](https://loom.com/i/fda83393c37f415db2c286af7d859a74?workflows_screenshot=true)
 
 - Go to the side of the room and log in using your email.
