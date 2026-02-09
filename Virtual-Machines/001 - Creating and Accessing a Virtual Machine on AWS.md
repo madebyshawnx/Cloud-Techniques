@@ -48,7 +48,7 @@ This SOP outlines the steps to create and connect to a virtual machine in AWS, e
 
 ![image alt](https://github.com/madebydxgxt/Cloud-Techniques/blob/main/Virtual-Machines/001/1.jpg?raw=true)
 
-![generated-image-at-00:00:05](https://loom.com/i/fda83393c37f415db2c286af7d859a74?workflows_screenshot=true)
+
 
 - Go to the side of the room and log in using your email.
 - Wait for the dashboard to load.
@@ -56,7 +56,7 @@ This SOP outlines the steps to create and connect to a virtual machine in AWS, e
 
 **Step 2: Configure the Virtual Machine** [0:30](https://loom.com/share/9a034b9d77f143d18157d71631305b02?t=30)
 
-![generated-image-at-00:00:30](https://loom.com/i/609898fc15e141e493a75dbec37eeffb?workflows_screenshot=true)
+![image alt](https://github.com/madebydxgxt/Cloud-Techniques/blob/main/Virtual-Machines/001/2.jpg?raw=true)
 
 - Name your server (e.g., 'My Server 01').
 - Select the type of virtual machine (choose Windows).
