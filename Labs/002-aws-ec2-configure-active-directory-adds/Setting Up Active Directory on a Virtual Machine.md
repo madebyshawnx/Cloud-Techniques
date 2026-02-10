@@ -3,7 +3,7 @@
 A beginner-friendly lab that installs and configures Active Directory Domain Services (AD DS) on a Windows Server virtual machine, then performs basic user administration in Active Directory.
 
 ## Watch me build this lab
-loom.com/share/3edd30f8c1a948e2b4d482b8c217c1c4
+[loom.com/share/3edd30f8c1a948e2b4d482b8c217c1c4](https://www.loom.com/share/3edd30f8c1a948e2b4d482b8c217c1c4)
 
 **What this video shows:** Installing AD DS, promoting a server to a Domain Controller, and creating a test user in Active Directory Users and Computers.
 
