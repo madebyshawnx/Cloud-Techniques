@@ -47,56 +47,91 @@ networking and security controls.
 ------------------------------------------------------------------------
 
 ## Steps Performed
+## Setting Up a Two-Tier Architecture in Azure
 
-1.  **Created Resource Group**\
-    Created a dedicated Azure Resource Group to logically organize all
-    infrastructure components for the lab.\
-    (Optional screenshot) docs/step-1.png
+**1. Introduction to Two-Tier Architecture** [0:02](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=2)
+![image alt](
 
-2.  **Configured Virtual Network**\
-    Defined a Virtual Network (VNet) with an address space to serve as
-    the private network boundary for both tiers.\
-    (Optional screenshot) docs/step-2.png
+- Overview of the lab's purpose: setting up a two-tier architecture in Azure.
+- Explanation of components: 
+  - Resource Group: Manages resources.
+  - Virtual Network: Contains two subnets for application and database servers.
 
-3.  **Created Web and Database Subnets**\
-    Segmented the VNet into separate subnets for the web server and
-    database server to isolate traffic between tiers.\
-    (Optional screenshot) docs/step-3.png
+**2. Logging into Azure** [1:03](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=63)
 
-4.  **Deployed Web Server Virtual Machine**\
-    Provisioned a virtual machine in the web subnet and configured it to
-    accept public web traffic (example: ports 80/443).\
-    (Optional screenshot) docs/step-4.png
 
-5.  **Configured Web Server Access Rules**\
-    Applied Network Security Group rules to allow HTTP/HTTPS traffic
-    publicly while restricting administrative access.\
-    (Optional screenshot) docs/step-5.png
+- Ensure you have an Azure account.
+- Log into the Azure portal.
 
-6.  **Deployed Database Server Virtual Machine**\
-    Provisioned a backend virtual machine in the database subnet with no
-    public exposure.\
-    (Optional screenshot) docs/step-6.png
+**3. Creating a Resource Group** [1:15](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=75)
 
-7.  **Restricted Database Access**\
-    Configured Network Security Group rules to allow database traffic
-    (example: port 1433) only from the web subnet.\
-    (Optional screenshot) docs/step-7.png
 
-8.  **Validated Inter-Tier Connectivity**\
-    Tested communication between the web server and database server to
-    confirm proper internal routing and security controls.\
-    (Optional screenshot) docs/step-8.png
+- Click on 'Create Resource'.
+- Create a new resource group (e.g., RG Lab O3).
+- Follow naming conventions.
 
-9.  **Verified Public Web Access**\
-    Confirmed that the web server was reachable via its public IP
-    address while the database server remained private.\
-    (Optional screenshot) docs/step-9.png
+**4. Creating a Virtual Network** [1:35](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=95)
 
-10. **Reviewed Architecture and Security Design**\
-    Reviewed the overall design to ensure proper tier separation,
-    minimal public exposure, and controlled traffic flow.\
-    (Optional screenshot) docs/step-10.png
+
+- Create a virtual network within the resource group.
+- Name the virtual network (e.g., The Nets).
+- Configure security settings (encryption options).
+
+**5. Creating Subnets** [2:31](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=151)
+
+
+- Split the virtual network into two subnets: 
+  - Web Subnet (e.g., S-net Web).
+  - Database Subnet (e.g., S-net DB).
+- Assign IP ranges (e.g., /24).
+
+**6. Creating Virtual Machines** [5:27](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=327)
+
+
+- Navigate to 'Virtual Machines' and click 'Create'.
+- Create the first VM (Application Server): 
+  - Name it (e.g., VM Web O3).
+  - Choose Linux instance (e.g., Ubuntu).
+  - Configure SSH key pair.
+
+**7. Configuring VM Settings** [7:23](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=443)
+
+
+- Set disk type to Standard SSD.
+- Select the virtual network and subnet (Web Subnet).
+- Enable public IP for the application server.
+
+**8. Creating the Second Virtual Machine** [9:35](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=575)
+
+
+- Repeat the process to create the second VM (Database Server): 
+  - Name it (e.g., VM DB O3).
+  - Choose Linux instance.
+  - Set it to private (no public IP).
+
+**9. Connecting to the Application Server** [12:18](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=738)
+
+
+- Connect to the first VM (Application Server) using SSH.
+
+**10. Testing Connectivity to Database Server** [14:20](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=860)
+
+
+- Use the ping command to test connectivity from the application server to the database server.
+
+**11. Configuring Network Security Group (NSG)** [16:14](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=974)
+
+
+- Navigate to the NSG settings for the database server.
+- Create a new inbound security rule to allow traffic from the application server.
+
+**12. Conclusion** [19:01](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=1141)
+
+
+- Summary of the lab: 
+  - Created a resource group, virtual network, and two VMs in separate subnets.
+  - Validated connectivity between the application and database servers.
+
 
 ------------------------------------------------------------------------
 
