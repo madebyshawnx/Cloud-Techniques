@@ -50,7 +50,7 @@ networking and security controls.
 ## Setting Up a Two-Tier Architecture in Azure
 
 **1. Introduction to Two-Tier Architecture** [0:02](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=2)
-![image alt](
+![image alt](https://github.com/madebyshawnx/Cloud-Techniques/blob/main/Labs/010-setting-up-a-2-tier-architecture-in-azure/artifacts/1.jpg?raw=true)
 
 - Overview of the lab's purpose: setting up a two-tier architecture in Azure.
 - Explanation of components: 
@@ -58,12 +58,14 @@ networking and security controls.
   - Virtual Network: Contains two subnets for application and database servers.
 
 **2. Logging into Azure** [1:03](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=63)
+![image alt](https://github.com/madebyshawnx/Cloud-Techniques/blob/main/Labs/010-setting-up-a-2-tier-architecture-in-azure/artifacts/2.jpg?raw=true)
 
 
 - Ensure you have an Azure account.
 - Log into the Azure portal.
 
 **3. Creating a Resource Group** [1:15](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=75)
+![image alt](https://github.com/madebyshawnx/Cloud-Techniques/blob/main/Labs/010-setting-up-a-2-tier-architecture-in-azure/artifacts/3.jpg?raw=true)
 
 
 - Click on 'Create Resource'.
@@ -71,6 +73,7 @@ networking and security controls.
 - Follow naming conventions.
 
 **4. Creating a Virtual Network** [1:35](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=95)
+![image alt](https://github.com/madebyshawnx/Cloud-Techniques/blob/main/Labs/010-setting-up-a-2-tier-architecture-in-azure/artifacts/4.jpg?raw=true)
 
 
 - Create a virtual network within the resource group.
@@ -78,6 +81,7 @@ networking and security controls.
 - Configure security settings (encryption options).
 
 **5. Creating Subnets** [2:31](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=151)
+![image alt](https://github.com/madebyshawnx/Cloud-Techniques/blob/main/Labs/010-setting-up-a-2-tier-architecture-in-azure/artifacts/5.jpg?raw=true)
 
 
 - Split the virtual network into two subnets: 
@@ -86,6 +90,7 @@ networking and security controls.
 - Assign IP ranges (e.g., /24).
 
 **6. Creating Virtual Machines** [5:27](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=327)
+![image alt](https://github.com/madebyshawnx/Cloud-Techniques/blob/main/Labs/010-setting-up-a-2-tier-architecture-in-azure/artifacts/6.jpg?raw=true)
 
 
 - Navigate to 'Virtual Machines' and click 'Create'.
@@ -95,6 +100,7 @@ networking and security controls.
   - Configure SSH key pair.
 
 **7. Configuring VM Settings** [7:23](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=443)
+![image alt](https://github.com/madebyshawnx/Cloud-Techniques/blob/main/Labs/010-setting-up-a-2-tier-architecture-in-azure/artifacts/7.jpg?raw=true)
 
 
 - Set disk type to Standard SSD.
@@ -102,6 +108,7 @@ networking and security controls.
 - Enable public IP for the application server.
 
 **8. Creating the Second Virtual Machine** [9:35](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=575)
+![image alt](https://github.com/madebyshawnx/Cloud-Techniques/blob/main/Labs/010-setting-up-a-2-tier-architecture-in-azure/artifacts/8.jpg?raw=true)
 
 
 - Repeat the process to create the second VM (Database Server): 
@@ -110,22 +117,26 @@ networking and security controls.
   - Set it to private (no public IP).
 
 **9. Connecting to the Application Server** [12:18](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=738)
+![image alt](https://github.com/madebyshawnx/Cloud-Techniques/blob/main/Labs/010-setting-up-a-2-tier-architecture-in-azure/artifacts/9.jpg?raw=true)
 
 
 - Connect to the first VM (Application Server) using SSH.
 
 **10. Testing Connectivity to Database Server** [14:20](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=860)
+![image alt](https://github.com/madebyshawnx/Cloud-Techniques/blob/main/Labs/010-setting-up-a-2-tier-architecture-in-azure/artifacts/10.jpg?raw=true)
 
 
 - Use the ping command to test connectivity from the application server to the database server.
 
 **11. Configuring Network Security Group (NSG)** [16:14](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=974)
+![image alt](https://github.com/madebyshawnx/Cloud-Techniques/blob/main/Labs/010-setting-up-a-2-tier-architecture-in-azure/artifacts/11.jpg?raw=true)
 
 
 - Navigate to the NSG settings for the database server.
 - Create a new inbound security rule to allow traffic from the application server.
 
 **12. Conclusion** [19:01](https://loom.com/share/63c748cf2a134119882dd8af1c4bd4aa?t=1141)
+![image alt](https://github.com/madebyshawnx/Cloud-Techniques/blob/main/Labs/010-setting-up-a-2-tier-architecture-in-azure/artifacts/12.jpg?raw=true)
 
 
 - Summary of the lab: 
